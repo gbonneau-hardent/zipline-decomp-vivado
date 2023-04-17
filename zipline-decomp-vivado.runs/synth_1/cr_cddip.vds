@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Apr 17 08:57:27 2023
+# Process ID: 9492
+# Current directory: C:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.runs/synth_1
+# Command line: vivado.exe -log cr_cddip.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cr_cddip.tcl
+# Log file: C:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.runs/synth_1/cr_cddip.vds
+# Journal file: C:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.runs/synth_1\vivado.jou
+# Running On: Xeon-4114, OS: Windows, CPU Frequency: 2200 MHz, CPU Physical cores: 10, Host memory: 24300 MB
+#-----------------------------------------------------------
+source cr_cddip.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1002.848 ; gain = 118.582
+Command: synth_design -top cr_cddip -part xcvu19p-fsva3824-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu19p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu19p'
+INFO: [Common 17-86] Your Synthesis license expires in 29 day(s)
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6372
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11065] parameter 'N_UF_ENTRIES' becomes localparam in 'cr_crcgc_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_crcgc/cr_crcgc_core.sv:49]
+WARNING: [Synth 8-11065] parameter 'N_UF_AFULL_VAL' becomes localparam in 'cr_crcgc_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_crcgc/cr_crcgc_core.sv:50]
+WARNING: [Synth 8-11065] parameter 'N_UF_AEMPTY_VAL' becomes localparam in 'cr_crcgc_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_crcgc/cr_crcgc_core.sv:51]
+WARNING: [Synth 8-11065] parameter 'N_UF_ENTRIES' becomes localparam in 'cr_prefix_attach_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_core.sv:40]
+WARNING: [Synth 8-11065] parameter 'N_UF_AFULL_VAL' becomes localparam in 'cr_prefix_attach_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_core.sv:41]
+WARNING: [Synth 8-11065] parameter 'N_UF_AEMPTY_VAL' becomes localparam in 'cr_prefix_attach_core' with formal parameter declaration list [C:/git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_core.sv:42]
+WARNING: [Synth 8-6716] converting concatenation to assignment pattern [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:110]
+INFO: [Synth 8-11241] undeclared symbol 'bimc_odat', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:148]
+INFO: [Synth 8-11241] undeclared symbol 'bimc_osync', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:149]
+INFO: [Synth 8-11241] undeclared symbol 'ro_uncorrectable_ecc_error', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:150]
+INFO: [Synth 8-11241] undeclared symbol 'lvm', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:155]
+INFO: [Synth 8-11241] undeclared symbol 'mlvm', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:156]
+INFO: [Synth 8-11241] undeclared symbol 'mrdten', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:157]
+INFO: [Synth 8-11241] undeclared symbol 'bimc_rst_n', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:158]
+INFO: [Synth 8-11241] undeclared symbol 'bimc_isync', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:159]
+INFO: [Synth 8-11241] undeclared symbol 'bimc_idat', assumed default net type 'wire' [C:/git/Project-Zipline/rtl/common/nx_library/nx_fifo_1r1w_indirect_access_debug_cntrl.sv:160]
+ERROR: [Synth 8-36] 'bimc_odat' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:57]
+ERROR: [Synth 8-36] 'bimc_osync' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:57]
+ERROR: [Synth 8-36] 'ro_uncorrectable_ecc_error' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:58]
+ERROR: [Synth 8-36] 'ovstb' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:60]
+ERROR: [Synth 8-36] 'lvm' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+ERROR: [Synth 8-36] 'mlvm' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+ERROR: [Synth 8-36] 'mrdten' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+ERROR: [Synth 8-36] 'bimc_rst_n' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+ERROR: [Synth 8-36] 'bimc_isync' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+ERROR: [Synth 8-36] 'bimc_idat' is not declared [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:61]
+INFO: [Synth 8-10285] module 'nx_interface_monitor' is ignored due to previous errors [C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv:517]
+INFO: [Synth 8-9084] Verilog file 'C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv' ignored due to errors
+Failed to read verilog 'C:/git/Project-Zipline/rtl/common/nx_library/nx_interface_monitor.sv'
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 7 Warnings, 0 Critical Warnings and 11 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 17 08:57:53 2023...
