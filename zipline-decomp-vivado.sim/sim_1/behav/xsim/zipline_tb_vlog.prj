@@ -1,6 +1,7 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib "C:/git/Project-Zipline/rtl/common/include/messages.vh" --include "../../../../../../../../git/Project-Zipline/rtl/common/include" --include "../../../../../../../../git/Project-Zipline/rtl/common/axi" --include "../../../../../../../../git/Project-Zipline/rtl/mem_wrappers/bimc_master/top" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_sa" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_support" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cg" --include "../../../../../../../../git/Project-Zipline/rtl/cr_crcgc" --include "../../../../../../../../git/Project-Zipline/rtl/cr_isf" --include "../../../../../../../../git/Project-Zipline/rtl/cr_osf" --include "../../../../../../../../git/Project-Zipline/rtl/cr_prefix_attach" --include "../../../../../../../../git/Project-Zipline/rtl/cr_su" --include "../../../../../../../../git/Project-Zipline/rtl/cr_xp10_decomp" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip" --include "../../../../../../../../git/Project-Zipline/rtl/cr_prefix" \
+sv xil_defaultlib "C:/git/Project-Zipline/rtl/common/include/messages.vh" --include "../../../../../../../../git/Project-Zipline/rtl/common/include" --include "../../../../../../../../git/Project-Zipline/rtl/common/axi" --include "../../../../../../../../git/Project-Zipline/rtl/mem_wrappers/bimc_master/top" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cceip_64_sa" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_sa" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_support" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cg" --include "../../../../../../../../git/Project-Zipline/rtl/cr_crcgc" --include "../../../../../../../../git/Project-Zipline/rtl/cr_isf" --include "../../../../../../../../git/Project-Zipline/rtl/cr_osf" --include "../../../../../../../../git/Project-Zipline/rtl/cr_prefix_attach" --include "../../../../../../../../git/Project-Zipline/rtl/cr_su" --include "../../../../../../../../git/Project-Zipline/rtl/cr_xp10_decomp" --include "../../../../../../../../git/Project-Zipline/rtl/cr_cddip" --include "../../../../../../../../git/Project-Zipline/rtl/cr_prefix" -d "ENA_BIMC=1" \
 "../../../../../../../../git/Project-Zipline/rtl/common/CR_TIE_CELL.sv" \
+"../../../../../../../../git/Project-Zipline/dv/agents/apb/apb_xactor.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/axi/axi_channel_reg_slice.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/axi/axi_channel_split_slice.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/axi/axi_hndshk_split.sv" \
@@ -10,6 +11,7 @@ sv xil_defaultlib "C:/git/Project-Zipline/rtl/common/include/messages.vh" --incl
 "../../../../../../../../git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_mstr_su.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_slv.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_slv2.sv" \
+"../../../../../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_cddip/cr_cddip.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_core.sv" \
@@ -58,6 +60,7 @@ sv xil_defaultlib "C:/git/Project-Zipline/rtl/common/include/messages.vh" --incl
 "../../../../../../../../git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_regfile.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_regs.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/common/cr_rst_sync.sv" \
+"../../../../../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_sa_counter.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_su/cr_su.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_su/cr_su_core.sv" \
 "../../../../../../../../git/Project-Zipline/rtl/cr_su/cr_su_ctl.sv" \
