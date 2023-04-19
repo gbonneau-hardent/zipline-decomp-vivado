@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xcvu19p-fsva3824-2-e" LaunchTime="1681736241">
+<GenRun Id="synth_1" LaunchPart="xcvu57p-fsvk2892-2-e" LaunchTime="1681859054">
   <File Type="PA-TCL" Name="cr_cddip.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="cr_cddip_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="cr_cddip_reports.tcl"/>
   <File Type="RDS-RDS" Name="cr_cddip.vds"/>
   <File Type="RDS-UTIL" Name="cr_cddip_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="cr_cddip_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="cr_cddip.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="cr_cddip_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="cr_cddip_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/common/include/messages_v2.vh">
@@ -138,11 +135,53 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regs.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regsPKG.svp">
+      <FileInfo SFType="VHeader">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_saPKG.svp">
+      <FileInfo SFType="VHeader">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/common/include/crPKG.svp">
       <FileInfo SFType="VHeader">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
         <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regfilePKG.svp">
+      <FileInfo SFType="VHeader">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_regs.vh">
@@ -726,6 +765,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_sa_counter.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_su/cr_su_regs.vh">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -930,11 +976,11 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_xp10_decomp/cr_xp10_decomp_sch_update_stub.sv">
-      <FileInfo>
+      <FileInfo SFType="VHeader">
         <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_xp10_decomp/cr_xp10_decomp_core.sv">
@@ -2138,6 +2184,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regfile.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regs.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_core.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="cr_cddip"/>
@@ -2156,9 +2226,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

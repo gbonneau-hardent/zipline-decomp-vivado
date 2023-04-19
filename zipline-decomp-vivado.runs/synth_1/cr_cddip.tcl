@@ -70,20 +70,20 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xcvu19p-fsva3824-2-e
+create_project -in_memory -part xcvu57p-fsvk2892-2-e
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_param synth.elaboration.rodinMoreOptions {rt::set_parameter dissolveMemorySizeLimit 1563000}
 set_property webtalk.parent_dir C:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.cache/wt [current_project]
 set_property parent.project_path C:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/guy/xilinx_project/zipline-decomp-vivado/zipline-decomp-vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+set_property verilog_define ENA_BIMC=1 [current_fileset]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
@@ -95,7 +95,12 @@ read_verilog {
   C:/git/Project-Zipline/rtl/common/include/cr_global_params.vh
   C:/git/Project-Zipline/rtl/common/include/cr_native_types.svh
   C:/git/Project-Zipline/rtl/common/include/cr_error_codes.svh
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa.vh
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regs.vh
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regsPKG.svp
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_saPKG.svp
   C:/git/Project-Zipline/rtl/common/include/crPKG.svp
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regfilePKG.svp
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_regs.vh
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa.vh
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_saPKG.svp
@@ -150,7 +155,10 @@ set_property is_global_include true [get_files C:/git/Project-Zipline/rtl/common
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/common/include/cr_structs.sv]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/common/include/cr_native_types.svh]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/common/include/cr_error_codes.svh]
+set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regsPKG.svp]
+set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_saPKG.svp]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/common/include/crPKG.svp]
+set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa_regfilePKG.svp]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_saPKG.svp]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_regsPKG.svp]
 set_property file_type "Verilog Header" [get_files C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_regfilePKG.svp]
@@ -191,6 +199,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_mstr_su.sv
   C:/git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_slv.sv
   C:/git/Project-Zipline/rtl/common/cr_tlvp/cr_axi4s_slv2.sv
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_cceip_64_sa.sv
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa.sv
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_core.sv
   C:/git/Project-Zipline/rtl/cr_cddip_sa/cr_cddip_sa_regfile.sv
@@ -238,6 +247,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_regfile.sv
   C:/git/Project-Zipline/rtl/cr_prefix_attach/cr_prefix_attach_regs.sv
   C:/git/Project-Zipline/rtl/common/cr_rst_sync.sv
+  C:/git/Project-Zipline/rtl/cr_cceip_64_sa/cr_sa_counter.sv
   C:/git/Project-Zipline/rtl/cr_su/cr_su.sv
   C:/git/Project-Zipline/rtl/cr_su/cr_su_core.sv
   C:/git/Project-Zipline/rtl/cr_su/cr_su_ctl.sv
@@ -339,7 +349,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top cr_cddip -part xcvu19p-fsva3824-2-e
+synth_design -top cr_cddip -part xcvu57p-fsvk2892-2-e
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
